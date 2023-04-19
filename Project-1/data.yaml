@@ -1,0 +1,13 @@
+names:
+- d_license_plate
+- pl_license_plate
+nc: 2
+roboflow:
+  license: CC BY 4.0
+  project: project-ttd5y
+  url: https://universe.roboflow.com/project-n3wam/project-ttd5y/dataset/1
+  version: 1
+  workspace: project-n3wam
+test: test/images
+train: train/images
+val: valid/images
