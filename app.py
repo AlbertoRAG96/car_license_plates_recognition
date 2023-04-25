@@ -45,13 +45,7 @@ def upload_image():
 
 def process_plate_numbers(plate_numbers):
     plate_numbers = re.sub('[^a-zA-Z0-9 \n\.]', '', plate_numbers)
-    plate_numbers = plate_numbers.replace(' ','')
-    digits = plate_numbers[:4]
-    if digits.isdigit():
-        return plate_numbers[:4] + ' ' + plate_numbers[4:]
-    else:
-        plate_numbers = plate_numbers[1:]
-        return process_plate_numbers(plate_numbers)
+    return plate_numbers
 
 @app.route("/process_image/<filename>")
 def process_image(filename):
