@@ -57,7 +57,7 @@ http://127.0.0.1:5000/
 
 ## Example Notebook
 
-An example notebook is includede in the `examples` folder to show you how to use the YOLOv8 model. You can find it [here](https://github.com/AlbertoRAG96/car_license_plates_recognition/main/examples).
+An example notebook is includede in the `examples` folder to show you how to use the YOLOv8 model. You can find it [here](https://github.com/AlbertoRAG96/car_license_plates_recognition/tree/main/examples).
 
 ## Contributing
 
