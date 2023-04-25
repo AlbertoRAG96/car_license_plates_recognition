@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Resultado</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1>Detector de matrículas</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li class="current"><a href="{{ url_for('upload_image') }}">Inicio</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>Imagen procesada</h1>
+        <img src="{{ url_for('static', filename=filename) }}" alt="Resultado">
+        <h2>Matrículas detectadas:</h2>
+        <ul>
+            {% for car_plate_key, car_plate_info in car_plates.items() %}
+                <li>Región detectada: <img class="region" src="{{ url_for('static', filename=car_plate_info['plate_region']) }}"></li>
+                <li>Matrícula detectada: {{ car_plate_info['plate_numbers'] }}</li>
+            {% endfor %}
+        </ul>
+
+        <a href="{{ url_for('upload_image') }}">Subir otra imagen</a>
+    </div>
+
+    <footer class="footer position-relative">
+        <p>&copy; 2023 Detector de matrículas. <a href="https://www.aruizartds.com">www.aruizartds.com</a></p>
+    </footer>
+
+</body>
+</html>

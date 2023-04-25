@@ -84,7 +84,7 @@ def process_image(filename):
 
             # Extract license plate numbers using Tesseract
             plate_numbers = pytesseract.image_to_string(plate_region)
-            # plate_numbers = process_plate_numbers(plate_numbers)
+            plate_numbers = process_plate_numbers(plate_numbers)
             car_plates[f'car_plate_{i}'] = {'plate_region': plate_region_path.replace('static/',''), 
                                             'plate_numbers': plate_numbers}
             print(f"\nPlate numbers: {plate_numbers}\n")

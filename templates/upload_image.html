@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Subir imagen</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1>Detector de matrículas</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li class="current"><a href="{{ url_for('upload_image') }}">Inicio</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container selectors">
+        <form method="POST" enctype="multipart/form-data" action="{{ url_for('upload_image') }}">
+            <label class="custom-file-upload" id="upload_label">
+                Seleccionar imagen
+                <input type="file" name="image" id="upload_input">
+            </label>
+            <div class="file-info" id="file_info"></div>
+            <label class="custom-file-submit">
+                Subir imagen
+                <input type="submit" name="image">
+            </label>
+        </form>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2023 Detector de matrículas. <a href="https://www.aruizartds.com">www.aruizartds.com</a></p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var fileInput = document.querySelectorAll('custom-file-upload')
+
+            fileInput.addEventListener('click', function(event) {
+                if (event.target !== fileInput) {
+                    fileInput.click();
+                }
+            });
+
+            fileInput.addEventListener('change', function() {
+                if (this.files && this.files.length > 0) {
+                    fileInput.classList.add('selected');
+                } else {
+                    fileInput.classList.remove('selected');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
