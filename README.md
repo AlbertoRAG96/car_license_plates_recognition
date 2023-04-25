@@ -27,8 +27,8 @@ This repository contains a car plates detector using **YOLOv8** and **PyTesserac
 To get started, clone this repository to your local machine:
 
 ```
-git clone https://github.com/AlbertoRAG96/car-plates-detector.git
-cd car-plates-detector
+git clone https://github.com/AlbertoRAG96/car_license_plates_recognition.git
+cd car_license_plates_recognition
 ```
 
 ## Installation
