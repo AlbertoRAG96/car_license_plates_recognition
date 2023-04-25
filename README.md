@@ -31,7 +31,7 @@ git clone https://github.com/AlbertoRAG96/car_license_plates_recognition.git
 cd car_license_plates_recognition
 ```
 
-## Installation
+## Installation<a name="installation"></a>
 
 To install all the necessary libraries and dependencies, run the following command:
 
@@ -39,7 +39,7 @@ To install all the necessary libraries and dependencies, run the following comma
 pip install -r requirements.txt
 ```
 
-## Usage 
+## Usage<a name="usage"></a>
 
 1. Start the Flask application:
 
@@ -55,14 +55,14 @@ http://127.0.0.1:5000/
 
 3. Upload an image and let the detector identify the license plate for you.
 
-## Example Notebook
+## Example Notebook<a name="example_notebook"></a>
 
 An example notebook is includede in the `examples` folder to show you how to use the YOLOv8 model. You can find it [here](https://github.com/AlbertoRAG96/car_license_plates_recognition/tree/main/examples).
 
-## Contributing
+## Contributing<a name="contributing"></a>
 
 If you want to contribute to this project, please submit a pull request with your changes, or create an issue to discuss your ideas.
 
-## License
+## License<a name="license"></a>
 
 This project is licensed under the [MIT License](https://opensource.org/license/mit/).
